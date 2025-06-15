@@ -18,7 +18,7 @@ target_include_directories(Engine PUBLIC ${CMAKE_CURRENT_SOURCE_DIR})
 
 # disabling exceptions and rtti support 
 if (MSVC)
-target_compile_options(Engine PRIVATE "/EHs-c-" "/GR-")
+  target_compile_options(Engine PRIVATE "/EHs-c-" "/GR-")
 else()
   target_compile_options(Engine PRIVATE "-fno-exceptions" "-fno-rtti")
 endif()
