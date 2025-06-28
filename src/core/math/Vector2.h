@@ -73,7 +73,7 @@ class Vector2
   constexpr Vector2<T> Projected(const Vector2<T>& v) const noexcept;
   constexpr Vector2<T>& Project(const Vector2<T>& v) noexcept;
   constexpr Vector2<T> Lerp(const Vector2<T>& v, T t) const noexcept;
-  constexpr Vector2<T> Reflected(const Vector2<T>& v) const noexcept;
+  constexpr Vector2<T> Reflected(const Vector2<T>& normal) const noexcept;
   constexpr Vector2<T>& Reflect(const Vector2<T>& normal) noexcept;
 
   static constexpr T Dot(const Vector2<T>& v1, const Vector2<T>& v2) noexcept;
