@@ -123,16 +123,16 @@ constexpr Vector2<T>::Vector2(T x, T y) noexcept
 template <typename T>
 template <typename U>
 constexpr Vector2<T>::Vector2(const Vector2<U>& other) noexcept
-    : x(static_cast<U>(other.x)),
-      y(static_cast<U>(other.y))
+    : x(static_cast<T>(other.x)),
+      y(static_cast<T>(other.y))
 {
 }
 
 template <typename T>
 template <typename U>
 constexpr Vector2<T>::Vector2(Vector2<U>&& other) noexcept
-    : x(static_cast<U>(other.x)),
-      y(static_cast<U>(other.y))
+    : x(static_cast<T>(other.x)),
+      y(static_cast<T>(other.y))
 {
 }
 
@@ -141,8 +141,8 @@ template <typename U>
 constexpr Vector2<T>& Vector2<T>::operator=(const Vector2<U>& other) noexcept
 {
   if (this != &other) {
-    x = static_cast<U>(other.x);
-    y = static_cast<U>(other.y);
+    x = static_cast<T>(other.x);
+    y = static_cast<T>(other.y);
   }
   return *this;
 }
@@ -152,8 +152,8 @@ template <typename U>
 constexpr Vector2<T>& Vector2<T>::operator=(Vector2<U>&& other) noexcept
 {
   if (this != &other) {
-    x = static_cast<U>(other.x);
-    y = static_cast<U>(other.y);
+    x = static_cast<T>(other.x);
+    y = static_cast<T>(other.y);
   }
   return *this;
 }
