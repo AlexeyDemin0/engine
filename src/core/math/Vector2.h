@@ -101,15 +101,15 @@ using Vector2d = Vector2<f64>;
 /* -------------------------------------- Implementations -------------------------------------- */
 template <typename T>
 constexpr Vector2<T>::Vector2() noexcept
-    : x(0),
-      y(0)
+    : x(static_cast<T>(0)),
+      y(static_cast<T>(0))
 {
 }
 
 template <typename T>
 constexpr Vector2<T>::Vector2(T x) noexcept
     : x(x),
-      y(0)
+      y(static_cast<T>(0))
 {
 }
 
