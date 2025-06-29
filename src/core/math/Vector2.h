@@ -33,6 +33,11 @@ class Vector2
   T x;
   T y;
 
+  static constexpr Vector2<T> Zero() noexcept;
+  static constexpr Vector2<T> One() noexcept;
+  static constexpr Vector2<T> UnitX() noexcept;
+  static constexpr Vector2<T> UnitY() noexcept;
+
   constexpr Vector2() noexcept;
   constexpr explicit Vector2(T x) noexcept;
   constexpr Vector2(T x, T y) noexcept;
@@ -99,6 +104,31 @@ using Vector2f = Vector2<f32>;
 using Vector2d = Vector2<f64>;
 
 /* -------------------------------------- Implementations -------------------------------------- */
+
+template <typename T>
+constexpr Vector2<T> Vector2<T>::Zero() noexcept
+{
+  return Vector2<T>(static_cast<T>(0), static_cast<T>(0));
+}
+
+template <typename T>
+constexpr Vector2<T> Vector2<T>::One() noexcept
+{
+  return Vector2<T>(static_cast<T>(1), static_cast<T>(1));
+}
+
+template <typename T>
+constexpr Vector2<T> Vector2<T>::UnitX() noexcept
+{
+  return Vector2<T>(static_cast<T>(1), static_cast<T>(0));
+}
+
+template <typename T>
+constexpr Vector2<T> Vector2<T>::UnitY() noexcept
+{
+  return Vector2<T>(static_cast<T>(0), static_cast<T>(1));
+}
+
 template <typename T>
 constexpr Vector2<T>::Vector2() noexcept
     : x(static_cast<T>(0)),
