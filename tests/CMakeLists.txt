@@ -1,6 +1,7 @@
 
 set(TEST_SOURCES
   "core/math/test_Vector2.cpp"
+  "core/math/test_Vector3.cpp"
 )
 
 add_executable(EngineTest ${TEST_SOURCES})
