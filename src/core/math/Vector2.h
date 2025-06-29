@@ -2,7 +2,7 @@
  * SPDX-License-Identifier: MIT
  *
  * @file Vector2.h
- * @brief Contains implementation of Vector2 class
+ * @brief Implementation of Vector2 class
  *
  * @todo Add doxygen documentation
  *
